@@ -1,13 +1,15 @@
 using gitout.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace gitout.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string name)
         {
+            ViewData["Name"] = name;
             return View();
         }
 
